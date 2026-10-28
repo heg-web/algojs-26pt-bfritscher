@@ -11,7 +11,11 @@ function multiplyArray(arr) {
 
 /* Multiply all elements in the array of array */
 function multiplyAll(arr) {
-  return;
+  let total = 1;
+  for(let sunArr of arr) {
+    total = total * multiplyArray(sunArr);
+  }
+  return total;
 }
 
 /* Multiply all elements in the given array which can have many sub-arrays*/
