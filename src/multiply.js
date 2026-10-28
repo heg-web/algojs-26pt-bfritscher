@@ -12,8 +12,8 @@ function multiplyArray(arr) {
 /* Multiply all elements in the array of array */
 function multiplyAll(arr) {
   let total = 1;
-  for(let sunArr of arr) {
-    total = total * multiplyArray(sunArr);
+  for(let subArr of arr) {
+    total = total * multiplyArray(subArr);
   }
   return total;
 }
