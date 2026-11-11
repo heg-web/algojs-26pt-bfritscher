@@ -10,8 +10,11 @@ If called correctly the function will return the index of the right answers in t
 
 */
 function findSecret(obj) {
-  
-  return;
+  const fname = obj.start.name;
+  const rParams = obj.start.params.toReversed();
+  const fun = obj[fname];
+  const index = fun(...rParams);
+  return obj.names[index];
 }
 
 exports.findSecret = findSecret;
